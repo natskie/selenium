@@ -6,19 +6,19 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
     input1=browser.find_element_by_css_selector('input.first[required]')
-    print(input1)
+
     input1.send_keys("joke")
-    input2=browser.find_element_by_css_selector('input.second[required]')
-    input2.send_keys("joke")
-    input3=browser.find_element_by_css_selector('input.third[required]')
-    input3.send_keys("joke")
+    #input2=browser.find_element_by_css_selector('input.second[required]')
+    #input2.send_keys("joke")
+    #input3=browser.find_element_by_css_selector('input.third[required]')
+    #input3.send_keys("joke")
     # Отправляем заполненную форму
     button = browser.find_element_by_css_selector("button.btn")
     button.click()
 
     # Проверяем, что смогли зарегистрироваться
     # ждем загрузки страницы
-    time.sleep(1)
+    #time.sleep(1)
 
     # находим элемент, содержащий текст
     welcome_text_elt = browser.find_element_by_tag_name("h1")
@@ -30,7 +30,7 @@ try:
 
 finally:
     # ожидание чтобы визуально оценить результаты прохождения скрипта
-    time.sleep(10)
+    time.sleep(3)
     # закрываем браузер после всех манипуляций
     
     browser.quit()
